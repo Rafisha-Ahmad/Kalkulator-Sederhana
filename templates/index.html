@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalkulator</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+    <div class="container">
+        <h1>Kalkulator Sederhana</h1>
+        
+        <form action="/" method="post">
+            <input type="number" name="angka1" placeholder="Angka Pertama" required>
+            <input type="number" name="angka2" placeholder="Angka Kedua" required>
+            
+            <div class="operator-group">
+                <input type="radio" id="tambah" name="operator" value="+" required>
+                <label for="tambah">+</label>
+
+                <input type="radio" id="kurang" name="operator" value="-">
+                <label for="kurang">-</label>
+
+                <input type="radio" id="kali" name="operator" value="*">
+                <label for="kali">*</label>
+
+                <input type="radio" id="bagi" name="operator" value="/">
+                <label for="bagi">/</label>
+            </div>
+
+            <button type="submit" class="btn-hitung">Hitung</button>
+            <a href="/"><button type="button" class="btn-reset">Reset</button></a>
+        </form>
+
+        {% if result is not none %}
+            <div class="hasil-box">
+                Hasil: {{ result }}
+            </div>
+        {% endif %}
+    </div>
+
+</body>
+</html>
