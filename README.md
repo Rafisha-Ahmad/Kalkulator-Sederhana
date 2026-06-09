@@ -28,3 +28,7 @@ PYTHON/
 ## Flask
 * Install **pip install flask** diterminal
 * Lalu jalankan dengan **python app.py**
+
+<p align="left">
+  <img src="https://raw.githubusercontent.com/lookfwd/lookfwd/main/luffy-run.gif" width="90" alt="Luffy" />
+</p>
